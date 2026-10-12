@@ -1,0 +1,31 @@
+{
+  "dataset": "data/CICIoT23_archive_sample_v1",
+  "scope": "34-class bounded archive sample; capture overlap possible in 17 row-split classes",
+  "calibration_seeds": [
+    101,
+    102,
+    103
+  ],
+  "calibration_warmup_epochs": 5,
+  "calibration_scales": [
+    1.15,
+    1.5
+  ],
+  "candidate_scale_preselected": 1.15,
+  "ablation_seeds": [
+    42,
+    43,
+    44
+  ],
+  "ablation_epochs": 10,
+  "batch_fraction": 1.0,
+  "balanced_rows_per_class": 1000,
+  "architecture": "unchanged original CNN/LSTM/attention",
+  "optimizer": "Adam learning_rate=0.0005 clipnorm=1",
+  "runtime": "CPU, 4 intra-op / 2 inter-op threads",
+  "validation": "fixed stratified halves, seed 2026; calibration fitting on first, ablation feedback/checkpoint selection on second",
+  "checkpoint_selection": "maximum validation macro-F1 within fixed 10-epoch budget",
+  "test": "fixed sample test already used by historical exploratory runs; no new test-driven tuning permitted",
+  "costs": "false alarm costs measured; resource/latency costs retain prototype assumptions",
+  "interpretation": "report a null policy outcome if game chooses NORMAL; never force an action or select settings using test results"
+}

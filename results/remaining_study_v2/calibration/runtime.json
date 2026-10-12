@@ -1,0 +1,7 @@
+{
+  "device_requested": "cpu",
+  "threads": 4,
+  "visible_devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ]
+}

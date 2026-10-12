@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "records": 128,
+  "alerts_received": 121,
+  "authenticated_loopback_tcp": true,
+  "server_exit": 0,
+  "agent_exit": 0,
+  "source": "Replay of existing validation feature CSV; no raw packet extraction"
+}

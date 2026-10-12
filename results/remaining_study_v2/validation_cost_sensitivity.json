@@ -1,0 +1,22 @@
+[
+  {
+    "resource_latency_weight_multiplier": 0.0,
+    "CLASS_REWEIGHTING": 30
+  },
+  {
+    "resource_latency_weight_multiplier": 0.1,
+    "CLASS_REWEIGHTING": 30
+  },
+  {
+    "resource_latency_weight_multiplier": 0.5,
+    "NORMAL": 30
+  },
+  {
+    "resource_latency_weight_multiplier": 1.0,
+    "NORMAL": 30
+  },
+  {
+    "resource_latency_weight_multiplier": 2.0,
+    "NORMAL": 30
+  }
+]

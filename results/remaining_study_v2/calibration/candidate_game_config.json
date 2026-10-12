@@ -1,0 +1,16 @@
+{
+  "effectiveness": {
+    "NORMAL": [
+      0.2660595730460596,
+      0.0
+    ],
+    "CLASS_REWEIGHTING": [
+      0.32652772077845316,
+      0.0
+    ]
+  },
+  "false_positive_cost": {
+    "NORMAL": 0.3773333333333333,
+    "CLASS_REWEIGHTING": 0.36533333333333334
+  }
+}

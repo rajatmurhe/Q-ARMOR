@@ -1,0 +1,66 @@
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.01582; defence=baseline
+Epoch 2: validation macro-F1=0.08321; defence=baseline
+Epoch 3: validation macro-F1=0.20668; defence=baseline
+Epoch 4: validation macro-F1=0.46900; defence=baseline
+Epoch 5: validation macro-F1=0.48933; defence=baseline
+Epoch 6: validation macro-F1=0.51748; defence=baseline
+Epoch 7: validation macro-F1=0.50849; defence=baseline
+Epoch 8: validation macro-F1=0.52617; defence=baseline
+Epoch 9: validation macro-F1=0.53308; defence=baseline
+Epoch 10: validation macro-F1=0.54019; defence=baseline
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.01582; defence=NORMAL
+Epoch 2: validation macro-F1=0.08321; defence=NORMAL
+Epoch 3: validation macro-F1=0.20668; defence=NORMAL
+Epoch 4: validation macro-F1=0.46900; defence=NORMAL
+Epoch 5: validation macro-F1=0.48933; defence=NORMAL
+Epoch 6: validation macro-F1=0.51748; defence=NORMAL
+Epoch 7: validation macro-F1=0.50849; defence=NORMAL
+Epoch 8: validation macro-F1=0.52617; defence=NORMAL
+Epoch 9: validation macro-F1=0.53308; defence=NORMAL
+Epoch 10: validation macro-F1=0.54019; defence=NORMAL
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.00387; defence=baseline
+Epoch 2: validation macro-F1=0.01305; defence=baseline
+Epoch 3: validation macro-F1=0.20433; defence=baseline
+Epoch 4: validation macro-F1=0.48395; defence=baseline
+Epoch 5: validation macro-F1=0.48911; defence=baseline
+Epoch 6: validation macro-F1=0.50894; defence=baseline
+Epoch 7: validation macro-F1=0.52472; defence=baseline
+Epoch 8: validation macro-F1=0.52757; defence=baseline
+Epoch 9: validation macro-F1=0.51884; defence=baseline
+Epoch 10: validation macro-F1=0.52459; defence=baseline
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.00387; defence=NORMAL
+Epoch 2: validation macro-F1=0.01305; defence=NORMAL
+Epoch 3: validation macro-F1=0.20433; defence=NORMAL
+Epoch 4: validation macro-F1=0.48395; defence=NORMAL
+Epoch 5: validation macro-F1=0.48911; defence=NORMAL
+Epoch 6: validation macro-F1=0.50894; defence=NORMAL
+Epoch 7: validation macro-F1=0.52472; defence=NORMAL
+Epoch 8: validation macro-F1=0.52757; defence=NORMAL
+Epoch 9: validation macro-F1=0.51884; defence=NORMAL
+Epoch 10: validation macro-F1=0.52459; defence=NORMAL
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.04352; defence=baseline
+Epoch 2: validation macro-F1=0.07660; defence=baseline
+Epoch 3: validation macro-F1=0.19189; defence=baseline
+Epoch 4: validation macro-F1=0.47574; defence=baseline
+Epoch 5: validation macro-F1=0.51518; defence=baseline
+Epoch 6: validation macro-F1=0.52684; defence=baseline
+Epoch 7: validation macro-F1=0.52907; defence=baseline
+Epoch 8: validation macro-F1=0.52203; defence=baseline
+Epoch 9: validation macro-F1=0.53467; defence=baseline
+Epoch 10: validation macro-F1=0.52153; defence=baseline
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.04352; defence=NORMAL
+Epoch 2: validation macro-F1=0.07660; defence=NORMAL
+Epoch 3: validation macro-F1=0.19189; defence=NORMAL
+Epoch 4: validation macro-F1=0.47574; defence=NORMAL
+Epoch 5: validation macro-F1=0.51518; defence=NORMAL
+Epoch 6: validation macro-F1=0.52684; defence=NORMAL
+Epoch 7: validation macro-F1=0.52907; defence=NORMAL
+Epoch 8: validation macro-F1=0.52203; defence=NORMAL
+Epoch 9: validation macro-F1=0.53467; defence=NORMAL
+Epoch 10: validation macro-F1=0.52153; defence=NORMAL

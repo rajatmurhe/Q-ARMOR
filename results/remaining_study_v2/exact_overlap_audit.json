@@ -1,0 +1,12 @@
+{
+  "validation": {
+    "rows": 16586,
+    "rows_with_exact_feature_match_in_train": 0,
+    "affected_classes": {}
+  },
+  "test": {
+    "rows": 16586,
+    "rows_with_exact_feature_match_in_train": 0,
+    "affected_classes": {}
+  }
+}

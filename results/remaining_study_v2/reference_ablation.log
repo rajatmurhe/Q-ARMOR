@@ -1,0 +1,33 @@
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.01582; defence=CLASS_REWEIGHTING
+Epoch 2: validation macro-F1=0.04729; defence=CLASS_REWEIGHTING
+Epoch 3: validation macro-F1=0.21228; defence=CLASS_REWEIGHTING
+Epoch 4: validation macro-F1=0.48033; defence=CLASS_REWEIGHTING
+Epoch 5: validation macro-F1=0.49490; defence=CLASS_REWEIGHTING
+Epoch 6: validation macro-F1=0.51232; defence=CLASS_REWEIGHTING
+Epoch 7: validation macro-F1=0.50409; defence=CLASS_REWEIGHTING
+Epoch 8: validation macro-F1=0.52445; defence=CLASS_REWEIGHTING
+Epoch 9: validation macro-F1=0.53117; defence=CLASS_REWEIGHTING
+Epoch 10: validation macro-F1=0.51550; defence=CLASS_REWEIGHTING
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.00387; defence=CLASS_REWEIGHTING
+Epoch 2: validation macro-F1=0.01823; defence=CLASS_REWEIGHTING
+Epoch 3: validation macro-F1=0.17833; defence=CLASS_REWEIGHTING
+Epoch 4: validation macro-F1=0.45236; defence=CLASS_REWEIGHTING
+Epoch 5: validation macro-F1=0.49346; defence=CLASS_REWEIGHTING
+Epoch 6: validation macro-F1=0.49609; defence=CLASS_REWEIGHTING
+Epoch 7: validation macro-F1=0.54047; defence=CLASS_REWEIGHTING
+Epoch 8: validation macro-F1=0.51534; defence=CLASS_REWEIGHTING
+Epoch 9: validation macro-F1=0.50152; defence=CLASS_REWEIGHTING
+Epoch 10: validation macro-F1=0.51834; defence=CLASS_REWEIGHTING
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.04352; defence=CLASS_REWEIGHTING
+Epoch 2: validation macro-F1=0.03199; defence=CLASS_REWEIGHTING
+Epoch 3: validation macro-F1=0.20018; defence=CLASS_REWEIGHTING
+Epoch 4: validation macro-F1=0.46144; defence=CLASS_REWEIGHTING
+Epoch 5: validation macro-F1=0.49765; defence=CLASS_REWEIGHTING
+Epoch 6: validation macro-F1=0.52717; defence=CLASS_REWEIGHTING
+Epoch 7: validation macro-F1=0.49983; defence=CLASS_REWEIGHTING
+Epoch 8: validation macro-F1=0.51709; defence=CLASS_REWEIGHTING
+Epoch 9: validation macro-F1=0.51701; defence=CLASS_REWEIGHTING
+Epoch 10: validation macro-F1=0.51995; defence=CLASS_REWEIGHTING

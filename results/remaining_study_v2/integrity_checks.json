@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "completed_training_runs": 9,
+  "epochs_per_run": 10,
+  "calibration_pairs": 6,
+  "calibration_and_audit_disjoint": true,
+  "validation_rows_per_run": 8293,
+  "test_rows_per_run": 16586,
+  "all_first_epochs_match_per_seed": true,
+  "frozen_config_verified": true,
+  "next_epoch_weights_match_controller_decisions": true,
+  "reference_updates_followed_by_training": {
+    "42": 8,
+    "43": 8,
+    "44": 7
+  }
+}

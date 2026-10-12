@@ -1,0 +1,18 @@
+{
+  "declared_utc": "2026-10-12T05:48:32.101626+00:00",
+  "reason": "Measured effect advantage is bounded by 0.060468 while declared cost difference is 0.129; the calibrated game cannot select reweighting for any F1 in [0,1] with uniform severity. Preserve that null and add a mechanism reference.",
+  "arm": "original_assumptions_reference",
+  "game_config": {},
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 10,
+  "batch_fraction": 1.0,
+  "balanced_rows_per_class": 1000,
+  "validation_subset": "audit",
+  "baseline": "Reuse the main study baseline results; identical per-seed preprocessing, initialization, sample order and budgets.",
+  "purpose": "Measure original-parameter Stackelberg-guided reweighting against baseline. Original effects/costs are prototype assumptions; not a calibrated recommendation.",
+  "no_new_test_outcomes_observed": true
+}

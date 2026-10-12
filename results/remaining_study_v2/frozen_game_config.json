@@ -1,0 +1,20 @@
+{
+  "config": {
+    "effectiveness": {
+      "NORMAL": [
+        0.2660595730460596,
+        0.0
+      ],
+      "CLASS_REWEIGHTING": [
+        0.32652772077845316,
+        0.0
+      ]
+    },
+    "false_positive_cost": {
+      "NORMAL": 0.3773333333333333,
+      "CLASS_REWEIGHTING": 0.36533333333333334
+    }
+  },
+  "sha256": "09102fc11e5b4183f197a8ddb5b1b3053deb9d2e662cb0df11ed1bd955984ff4",
+  "frozen_before_new_ablation_test_evaluations": true
+}

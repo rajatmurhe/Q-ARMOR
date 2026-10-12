@@ -1,0 +1,49 @@
+{
+  "python": "3.11.16",
+  "platform": "macOS-14.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "dependencies": {
+    "tensorflow": "2.16.2",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.4.2",
+    "imbalanced-learn": "0.12.2",
+    "cryptography": "46.0.7"
+  },
+  "devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')",
+    "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+  ],
+  "runtime": {
+    "device_requested": "cpu",
+    "threads": 4,
+    "visible_devices": [
+      "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+    ]
+  },
+  "arguments": {
+    "data_dir": "data/CICIoT23_archive_sample_v1",
+    "output": "/Users/rajatmurhe/Desktop/QuantumGuard-IoT-main/results/remaining_study_v2/reference_ablation",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 10,
+    "batch_size": 256,
+    "batch_fraction": 1.0,
+    "minority_target": 1000,
+    "majority_target": 1000,
+    "scale_step": 0.15,
+    "max_scale": 2.5,
+    "game_config": null,
+    "device": "cpu",
+    "threads": 4,
+    "resume": true,
+    "validation_subset": "audit",
+    "methods": [
+      "proposed"
+    ],
+    "check_data": false
+  },
+  "determinism": "Seeds and deterministic ops requested; Metal may not be bit-identical across hosts."
+}

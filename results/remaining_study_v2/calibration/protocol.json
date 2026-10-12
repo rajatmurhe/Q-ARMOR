@@ -1,0 +1,25 @@
+{
+  "data_dir": "data/CICIoT23_archive_sample_v1",
+  "output": "/Users/rajatmurhe/Desktop/QuantumGuard-IoT-main/results/remaining_study_v2/calibration",
+  "seeds": [
+    101,
+    102,
+    103
+  ],
+  "scales": [
+    1.15,
+    1.5
+  ],
+  "candidate_scale": 1.15,
+  "warmup_epochs": 5,
+  "batch_fraction": 1.0,
+  "batch_size": 256,
+  "minority_target": 1000,
+  "majority_target": 1000,
+  "device": "cpu",
+  "threads": 4,
+  "source_sha256": {
+    "train": "a8acb0fcc1a4a5a51739111d3fa4b486fd847cba8540a8e0bd608f852affb25c",
+    "val": "9f97a86a63944de8a9a11fa329165d683df08a7335e99c2038165c4aa3ab8886"
+  }
+}

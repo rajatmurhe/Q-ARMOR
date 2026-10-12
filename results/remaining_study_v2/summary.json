@@ -1,0 +1,401 @@
+{
+  "metrics": {
+    "accuracy": {
+      "baseline": {
+        "mean": 0.5608344386832268,
+        "sample_sd": 0.00789132075828769
+      },
+      "proposed": {
+        "mean": 0.5608344386832268,
+        "sample_sd": 0.00789132075828769
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "macro_f1": {
+      "baseline": {
+        "mean": 0.5395246811079876,
+        "sample_sd": 0.007654164180271684
+      },
+      "proposed": {
+        "mean": 0.5395246811079876,
+        "sample_sd": 0.007654164180271684
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "weighted_f1": {
+      "baseline": {
+        "mean": 0.5481176438953007,
+        "sample_sd": 0.008097680366133564
+      },
+      "proposed": {
+        "mean": 0.5481176438953007,
+        "sample_sd": 0.008097680366133564
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "macro_precision": {
+      "baseline": {
+        "mean": 0.578320900183572,
+        "sample_sd": 0.015489481552610485
+      },
+      "proposed": {
+        "mean": 0.578320900183572,
+        "sample_sd": 0.015489481552610485
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    },
+    "macro_recall": {
+      "baseline": {
+        "mean": 0.5547363837187688,
+        "sample_sd": 0.006381903873452737
+      },
+      "proposed": {
+        "mean": 0.5547363837187688,
+        "sample_sd": 0.006381903873452737
+      },
+      "paired_delta": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      }
+    }
+  },
+  "weak_classes": {
+    "Backdoor_Malware": {
+      "class": "Backdoor_Malware",
+      "baseline_mean": 0.18285587019048474,
+      "baseline_sd": 0.0338478764697126,
+      "proposed_mean": 0.18285587019048474,
+      "proposed_sd": 0.0338478764697126,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.1312146237995287,
+      "original_policy_sd": 0.08270290578081341
+    },
+    "BrowserHijacking": {
+      "class": "BrowserHijacking",
+      "baseline_mean": 0.3263157999767369,
+      "baseline_sd": 0.01838989143073398,
+      "proposed_mean": 0.3263157999767369,
+      "proposed_sd": 0.01838989143073398,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.31527589188052746,
+      "original_policy_sd": 0.05359072599022559
+    },
+    "CommandInjection": {
+      "class": "CommandInjection",
+      "baseline_mean": 0.3703145235086362,
+      "baseline_sd": 0.003442507709205836,
+      "proposed_mean": 0.3703145235086362,
+      "proposed_sd": 0.003442507709205836,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.36635725735959795,
+      "original_policy_sd": 0.021378873853359855
+    },
+    "SqlInjection": {
+      "class": "SqlInjection",
+      "baseline_mean": 0.2543929433731077,
+      "baseline_sd": 0.01973855216779488,
+      "proposed_mean": 0.2543929433731077,
+      "proposed_sd": 0.01973855216779488,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.32521003974270607,
+      "original_policy_sd": 0.01789219428141785
+    },
+    "Uploading_Attack": {
+      "class": "Uploading_Attack",
+      "baseline_mean": 0.1899231097271117,
+      "baseline_sd": 0.006158329739505264,
+      "proposed_mean": 0.1899231097271117,
+      "proposed_sd": 0.006158329739505264,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.19087550945977946,
+      "original_policy_sd": 0.01756565612175108
+    },
+    "VulnerabilityScan": {
+      "class": "VulnerabilityScan",
+      "baseline_mean": 0.25272585551927457,
+      "baseline_sd": 0.015058216967989825,
+      "proposed_mean": 0.25272585551927457,
+      "proposed_sd": 0.015058216967989825,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.16241751776792054,
+      "original_policy_sd": 0.07055073423501183
+    },
+    "XSS": {
+      "class": "XSS",
+      "baseline_mean": 0.09423166326932018,
+      "baseline_sd": 0.06457218547052924,
+      "proposed_mean": 0.09423166326932018,
+      "proposed_sd": 0.06457218547052924,
+      "paired_delta_mean": 0.0,
+      "original_policy_mean": 0.16423410354426035,
+      "original_policy_sd": 0.037588587486768306
+    }
+  },
+  "seeds": {
+    "42/baseline": {
+      "recommendations": {},
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 10,
+      "best_validation_macro_f1": 0.5401917662232636,
+      "final_validation_macro_f1": 0.5401917662232636,
+      "training_and_validation_seconds": 467.50261908298125
+    },
+    "42/proposed": {
+      "recommendations": {
+        "NORMAL": 10
+      },
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 10,
+      "best_validation_macro_f1": 0.5401917662232636,
+      "final_validation_macro_f1": 0.5401917662232636,
+      "training_and_validation_seconds": 408.69616083503934,
+      "probability_diagnostics": {
+        "p_def": {
+          "normalized": true,
+          "max_epoch_change": 0.011828038132434937,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        },
+        "p_att": {
+          "normalized": true,
+          "max_epoch_change": 0.007124014431333325,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        }
+      }
+    },
+    "43/baseline": {
+      "recommendations": {},
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 8,
+      "best_validation_macro_f1": 0.527571019228456,
+      "final_validation_macro_f1": 0.524586226046584,
+      "training_and_validation_seconds": 420.27188929298427
+    },
+    "43/proposed": {
+      "recommendations": {
+        "NORMAL": 10
+      },
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 8,
+      "best_validation_macro_f1": 0.527571019228456,
+      "final_validation_macro_f1": 0.524586226046584,
+      "training_and_validation_seconds": 633.0614230420906,
+      "probability_diagnostics": {
+        "p_def": {
+          "normalized": true,
+          "max_epoch_change": 0.012000387965715287,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        },
+        "p_att": {
+          "normalized": true,
+          "max_epoch_change": 0.007303849826776194,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        }
+      }
+    },
+    "44/baseline": {
+      "recommendations": {},
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 9,
+      "best_validation_macro_f1": 0.5346698521995569,
+      "final_validation_macro_f1": 0.521534185450454,
+      "training_and_validation_seconds": 621.6119451250415
+    },
+    "44/proposed": {
+      "recommendations": {
+        "NORMAL": 10
+      },
+      "applied_decisions": 0,
+      "decisions_with_subsequent_training": 0,
+      "best_epoch": 9,
+      "best_validation_macro_f1": 0.5346698521995569,
+      "final_validation_macro_f1": 0.521534185450454,
+      "training_and_validation_seconds": 647.2088967529999,
+      "probability_diagnostics": {
+        "p_def": {
+          "normalized": true,
+          "max_epoch_change": 0.011883856278013583,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        },
+        "p_att": {
+          "normalized": true,
+          "max_epoch_change": 0.007178536875728357,
+          "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+        }
+      }
+    }
+  },
+  "calibration_config": {
+    "config": {
+      "effectiveness": {
+        "NORMAL": [
+          0.2660595730460596,
+          0.0
+        ],
+        "CLASS_REWEIGHTING": [
+          0.32652772077845316,
+          0.0
+        ]
+      },
+      "false_positive_cost": {
+        "NORMAL": 0.3773333333333333,
+        "CLASS_REWEIGHTING": 0.36533333333333334
+      }
+    },
+    "sha256": "09102fc11e5b4183f197a8ddb5b1b3053deb9d2e662cb0df11ed1bd955984ff4",
+    "frozen_before_new_ablation_test_evaluations": true
+  },
+  "protocol": {
+    "dataset": "data/CICIoT23_archive_sample_v1",
+    "scope": "34-class bounded archive sample; capture overlap possible in 17 row-split classes",
+    "calibration_seeds": [
+      101,
+      102,
+      103
+    ],
+    "calibration_warmup_epochs": 5,
+    "calibration_scales": [
+      1.15,
+      1.5
+    ],
+    "candidate_scale_preselected": 1.15,
+    "ablation_seeds": [
+      42,
+      43,
+      44
+    ],
+    "ablation_epochs": 10,
+    "batch_fraction": 1.0,
+    "balanced_rows_per_class": 1000,
+    "architecture": "unchanged original CNN/LSTM/attention",
+    "optimizer": "Adam learning_rate=0.0005 clipnorm=1",
+    "runtime": "CPU, 4 intra-op / 2 inter-op threads",
+    "validation": "fixed stratified halves, seed 2026; calibration fitting on first, ablation feedback/checkpoint selection on second",
+    "checkpoint_selection": "maximum validation macro-F1 within fixed 10-epoch budget",
+    "test": "fixed sample test already used by historical exploratory runs; no new test-driven tuning permitted",
+    "costs": "false alarm costs measured; resource/latency costs retain prototype assumptions",
+    "interpretation": "report a null policy outcome if game chooses NORMAL; never force an action or select settings using test results"
+  },
+  "validation_cost_sensitivity": [
+    {
+      "resource_latency_weight_multiplier": 0.0,
+      "CLASS_REWEIGHTING": 30
+    },
+    {
+      "resource_latency_weight_multiplier": 0.1,
+      "CLASS_REWEIGHTING": 30
+    },
+    {
+      "resource_latency_weight_multiplier": 0.5,
+      "NORMAL": 30
+    },
+    {
+      "resource_latency_weight_multiplier": 1.0,
+      "NORMAL": 30
+    },
+    {
+      "resource_latency_weight_multiplier": 2.0,
+      "NORMAL": 30
+    }
+  ],
+  "original_assumptions_reference": {
+    "metrics": {
+      "accuracy": {
+        "mean": 0.5562120664013827,
+        "sample_sd": 0.011696352611829062,
+        "paired_delta_mean": -0.004622372281844145,
+        "paired_delta_sd": 0.018793387646114046
+      },
+      "macro_f1": {
+        "mean": 0.5386371289904357,
+        "sample_sd": 0.016191533082576117,
+        "paired_delta_mean": -0.0008875521175519449,
+        "paired_delta_sd": 0.017215824098538394
+      },
+      "weighted_f1": {
+        "mean": 0.5471926599364699,
+        "sample_sd": 0.016255779231457924,
+        "paired_delta_mean": -0.0009249839588308939,
+        "paired_delta_sd": 0.017446966746642464
+      },
+      "macro_precision": {
+        "mean": 0.5855566437486996,
+        "sample_sd": 0.01646332010890918,
+        "paired_delta_mean": 0.00723574356512761,
+        "paired_delta_sd": 0.019415488657848493
+      },
+      "macro_recall": {
+        "mean": 0.5506577191713308,
+        "sample_sd": 0.013139994298801916,
+        "paired_delta_mean": -0.00407866454743792,
+        "paired_delta_sd": 0.018494254443360496
+      }
+    },
+    "seeds": {
+      "42": {
+        "applied_updates_followed_by_training": 8,
+        "first_epoch_matches_baseline": true,
+        "probability_diagnostics": {
+          "p_def": {
+            "normalized": true,
+            "max_epoch_change": 0.0451914495925963,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          },
+          "p_att": {
+            "normalized": true,
+            "max_epoch_change": 0.006082529882410065,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          }
+        }
+      },
+      "43": {
+        "applied_updates_followed_by_training": 8,
+        "first_epoch_matches_baseline": true,
+        "probability_diagnostics": {
+          "p_def": {
+            "normalized": true,
+            "max_epoch_change": 0.04825824391357192,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          },
+          "p_att": {
+            "normalized": true,
+            "max_epoch_change": 0.0061840784513647815,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          }
+        }
+      },
+      "44": {
+        "applied_updates_followed_by_training": 7,
+        "first_epoch_matches_baseline": true,
+        "probability_diagnostics": {
+          "p_def": {
+            "normalized": true,
+            "max_epoch_change": 0.046993692510810536,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          },
+          "p_att": {
+            "normalized": true,
+            "max_epoch_change": 0.006236234621439157,
+            "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+          }
+        }
+      }
+    }
+  }
+}

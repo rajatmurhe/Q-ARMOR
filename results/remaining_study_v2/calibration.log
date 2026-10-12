@@ -1,0 +1,33 @@
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 101, warmup 1/5: macro-F1=0.0097, 51.7s
+Calibration seed 101, warmup 2/5: macro-F1=0.0825, 42.0s
+Calibration seed 101, warmup 3/5: macro-F1=0.2733, 50.0s
+Calibration seed 101, warmup 4/5: macro-F1=0.4930, 57.1s
+Calibration seed 101, warmup 5/5: macro-F1=0.5031, 48.2s
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 101, scale 1.1489: target delta=+0.0321, audit delta=+0.0322
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 101, scale 1.4963: target delta=+0.2798, audit delta=+0.3223
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 102, warmup 1/5: macro-F1=0.0183, 50.9s
+Calibration seed 102, warmup 2/5: macro-F1=0.0826, 42.0s
+Calibration seed 102, warmup 3/5: macro-F1=0.3426, 42.2s
+Calibration seed 102, warmup 4/5: macro-F1=0.4910, 47.1s
+Calibration seed 102, warmup 5/5: macro-F1=0.5002, 59.6s
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 102, scale 1.1456: target delta=-0.0179, audit delta=-0.0290
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 102, scale 1.4852: target delta=-0.0577, audit delta=-0.0693
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 103, warmup 1/5: macro-F1=0.0034, 63.4s
+Calibration seed 103, warmup 2/5: macro-F1=0.0479, 51.2s
+Calibration seed 103, warmup 3/5: macro-F1=0.2474, 48.0s
+Calibration seed 103, warmup 4/5: macro-F1=0.4912, 46.0s
+Calibration seed 103, warmup 5/5: macro-F1=0.5030, 45.9s
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 103, scale 1.1500: target delta=+0.1675, audit delta=+0.2228
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Calibration seed 103, scale 1.5000: target delta=+0.3424, audit delta=+0.3251

@@ -1,0 +1,12 @@
+{
+  "classes": [
+    "Backdoor_Malware",
+    "BrowserHijacking",
+    "CommandInjection",
+    "SqlInjection",
+    "Uploading_Attack",
+    "VulnerabilityScan",
+    "XSS"
+  ],
+  "basis": "Pre-established project bridge weak-class list; no test-score selection."
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "Synthetic arrays for execution speed only; no detection scores",
+  "shape": [
+    256,
+    25
+  ],
+  "architecture": "unchanged original CNN/LSTM/attention",
+  "CPU_threads": 4,
+  "inter_op_threads": 2,
+  "cpu_train_batch_seconds": [
+    10.3760855,
+    0.495212417,
+    0.652060417
+  ],
+  "metal_train_batch_seconds": [
+    25.983314208,
+    1.005986167,
+    0.913100875
+  ],
+  "cpu_predict_1024_seconds": 2.016457875,
+  "metal_predict_1024_seconds": 3.297190167,
+  "note": "First step includes tracing/compilation. Model, optimizer and inputs matched across devices. Device choice is based on runtime, not validation or test performance."
+}
