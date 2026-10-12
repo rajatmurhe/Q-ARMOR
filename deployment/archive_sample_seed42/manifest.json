@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "method": "baseline",
+  "benign_label": "BenignTraffic",
+  "selection": "Seed 42 baseline fixed in deployment protocol; checkpoint selected by validation macro-F1.",
+  "source_checkpoint": "/Users/rajatmurhe/Desktop/QuantumGuard-IoT-main/results/remaining_study_v2/ablation/42/baseline/best.weights.h5",
+  "train_sha256": "a8acb0fcc1a4a5a51739111d3fa4b486fd847cba8540a8e0bd608f852affb25c",
+  "architecture_sha256": "fc9fda7330285a1384a6164152bb022dcbd7e2508ca6c8bbfd29f0dc7eb825a0",
+  "sha256": {
+    "model.weights.h5": "1d7f459cb37aaba2448ae3638181e16e107f2a9a3c4375b68a36bd5ece354f59",
+    "preprocessing.json": "0c8c9a1ab90c6e5cfebb23b0b56be1935d8b7968ad79a2757788c154f58712be"
+  },
+  "scope": "Bounded archive sample research model; consumes compatible extracted feature records."
+}

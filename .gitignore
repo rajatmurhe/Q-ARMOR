@@ -1,0 +1,31 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Dataset inputs and local output
+*.zip
+data/**/*.csv
+data/**/*.pcap
+data/**/*.pcapng
+alerts.jsonl
+metrics.json
+results/live_receiver/
+
+# Provisioned keys and counter state
+.env
+.env.*
+!.env.example
+*.private.pem
+*.key
+*.sqlite
+*.sqlite-*
+*.db
+
+# Local identity provisioning and new run outputs
+.local-identities/
+results/deployment_demo_*/
+results/receiver_*/
