@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "evidence": "synthetic integration fixture; no dataset-quality evaluation",
+  "synthetic": true,
+  "records": 128,
+  "alerts_received": 128,
+  "authenticated_loopback_tcp": true,
+  "server_exit": 0,
+  "agent_exit": 0,
+  "features_sha256": "fe7e463335d692371bc628505f8bccb086f5951cb8d24499edf79e8fed1cacbd",
+  "private_keys_removed_on_exit": true
+}

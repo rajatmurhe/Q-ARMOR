@@ -1,0 +1,13 @@
+{
+  "official_publisher": "https://www.unb.ca/cic/datasets/iotdataset-2023.html",
+  "official_browse_url": "https://cicresearch.ca/IOTDataset/CIC_IOT_Dataset2023/browse.php?p=CSV",
+  "mirror_candidate": "https://www.kaggle.com/datasets/nikitamanaenkov/large-scale-attacks-in-iot-environment",
+  "probe_file": "data/Backdoor_Malware/Backdoor_Malware.pcap.csv",
+  "probe_bytes": 664577,
+  "probe_sha256": "b076424c816ecf99f40d466f95a8ea4336c5077d4afdc05220fa26d528f4a06f",
+  "observed_rows": 3218,
+  "observed_columns": 39,
+  "matches_saved_feature_schema_and_class_row_count": true,
+  "full_mirror_identity_verified": false,
+  "used_in_research_training_or_metrics": false
+}

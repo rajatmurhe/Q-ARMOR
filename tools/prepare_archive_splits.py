@@ -50,9 +50,31 @@ def retain_smallest_keys(keys, sample, chunk, new_keys, limit):
     return old["__sample_key"].reset_index(drop=True), old.drop(columns="__sample_key").reset_index(drop=True)
 
 
+
+def canonical_sources(csv_members, source_prefix='CSV'):
+    """Map a repacked archive to the original seed names without changing rows."""
+    prefix = source_prefix.strip('/')+'/'
+    by_class, archive_members = {}, {}
+    for name in csv_members:
+        if not name.startswith(prefix):
+            continue
+        relative = name[len(prefix):]
+        parts = relative.split('/')
+        if len(parts) < 2:
+            continue
+        canonical = 'CSV/'+relative
+        if canonical in archive_members:
+            raise ValueError('Duplicate canonical source member: '+canonical)
+        label = 'BenignTraffic' if parts[0] == 'Benign_Final' else parts[0]
+        by_class.setdefault(label, []).append(canonical)
+        archive_members[canonical] = name
+    return by_class, archive_members
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--archive", type=Path, default=Path("CSV.zip"))
+    parser.add_argument("--source-prefix", default="CSV", help="Explicit container prefix; canonical sampling seeds remain CSV/<class>/<file>")
     parser.add_argument("--output", type=Path, default=Path("data/CICIoT23_archive_sample_v1"))
     parser.add_argument("--train-per-class", type=int, default=2000)
     parser.add_argument("--validation-per-class", type=int, default=500)
@@ -80,13 +102,7 @@ def main():
         with ZipFile(archive) as zf:
             csv_members = [i.filename for i in zf.infolist()
                            if not i.is_dir() and i.filename.lower().endswith(".csv")]
-            by_class = {}
-            for name in csv_members:
-                parts = name.split("/")
-                if len(parts) < 3 or parts[0] != "CSV":
-                    continue
-                label = "BenignTraffic" if parts[1] == "Benign_Final" else parts[1]
-                by_class.setdefault(label, []).append(name)
+            by_class, archive_members = canonical_sources(csv_members, args.source_prefix)
             if len(by_class) != 34:
                 raise ValueError(f"Expected 34 class folders in CICIoT2023 archive; found {len(by_class)}")
 
@@ -132,7 +148,7 @@ def main():
                     file_seed = int.from_bytes(hashlib.sha256(
                         f"{args.seed}:{member}".encode()).digest()[:8], "little")
                     file_rng = np.random.default_rng(file_seed)
-                    with zf.open(member) as stream:
+                    with zf.open(archive_members[member]) as stream:
                         for chunk in pd.read_csv(stream, chunksize=args.chunksize):
                             if headers is None:
                                 headers = list(chunk.columns)
@@ -190,6 +206,7 @@ def main():
                 "dataset": "CICIoT2023 CSV.zip class-folder archive",
                 "archive": str(archive),
                 "archive_bytes": archive.stat().st_size,
+                "source_prefix": args.source_prefix,
                 "archive_sha256": sha256(archive),
                 "sampling": "Uniform bounded reservoir sample per split/class; seed-stable.",
                 "seed": args.seed,

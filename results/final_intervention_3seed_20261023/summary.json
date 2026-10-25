@@ -1,0 +1,24 @@
+{
+  "status": "completed_intervention_analysis",
+  "data": "restored CICIoT2023 bounded archive sample; exact split hashes verified",
+  "method": "Existing Stackelberg IDS training-loop histories from original_assumptions_reference, seeds 42, 43, 44. For each seed, selected the first applied CLASS_REWEIGHTING decision targeting Recon-PingSweep and compared validation metrics immediately before the decision with the following epoch after the same model trained using the updated weights.",
+  "target": "Recon-PingSweep",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "recovery_success_seeds": 1,
+  "consistent_weak_class_recovery": false,
+  "weak_class_f1_mean_before": 0.19523363318340828,
+  "weak_class_f1_sample_sd_before": 0.01027793837601853,
+  "weak_class_f1_mean_after": 0.19599437828558464,
+  "weak_class_f1_sample_sd_after": 0.010462931631671234,
+  "weak_class_f1_mean_delta": 0.0007607451021763578,
+  "macro_f1_mean_before": 0.49047985908089786,
+  "macro_f1_sample_sd_before": 0.009040470681718621,
+  "macro_f1_mean_after": 0.5060511978976358,
+  "macro_f1_sample_sd_after": 0.018295981569832816,
+  "macro_f1_mean_delta": 0.01557133881673789,
+  "interpretation": "Stackelberg selected and applied class reweighting in all three seeds. Recon-PingSweep F1 rose in only one of three seeds; the requested consistent recovery objective was not demonstrated. Macro-F1 rose after the next epoch in all three, but these uncontrolled sequential training changes cannot attribute macro-F1 changes to reweighting alone. This is a validation intervention trace, not a test-set or causal estimate. No outcomes were filtered by whether they improved."
+}

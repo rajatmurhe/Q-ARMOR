@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "created_utc": "2026-10-21T17:36:13.439765+00:00",
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "checks": [],
+  "error": "ValueError('Notebook cell27 differs from the exported module adapter')"
+}

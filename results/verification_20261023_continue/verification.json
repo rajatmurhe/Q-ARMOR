@@ -1,0 +1,91 @@
+{
+  "status": "passed_runnable_checks",
+  "created_utc": "2026-10-23T15:01:38.102295+00:00",
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "checks": [
+    {
+      "name": "environment",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 20.037772500007122,
+      "log": "environment.log",
+      "command": [
+        "/Users/rajatmurhe/.venvs/qarmor/bin/python",
+        "-m",
+        "tools.check_environment"
+      ]
+    },
+    {
+      "name": "unit_tests",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 2.528261166997254,
+      "log": "unit_tests.log",
+      "command": [
+        "/Users/rajatmurhe/.venvs/qarmor/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ]
+    },
+    {
+      "name": "saved_study",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 1.2292365839966806,
+      "log": "saved_study.log",
+      "command": [
+        "/Users/rajatmurhe/.venvs/qarmor/bin/python",
+        "-m",
+        "tools.check_study_results",
+        "--output",
+        "/Users/rajatmurhe/Projects/Q-ARMOR/results/verification_20261023_continue/study_integrity.json"
+      ]
+    }
+  ],
+  "source_checks": {
+    "python_modules_parsed": 43,
+    "notebook_active_cells_parsed": true,
+    "cell27_matches_adapter": true
+  },
+  "bundle": {
+    "status": "verified",
+    "seed": 42,
+    "method": "baseline",
+    "files": [
+      "model.weights.h5",
+      "preprocessing.json"
+    ]
+  },
+  "data": {
+    "status": "blocked",
+    "scope": "Frozen bounded archive sample; not the original Kaggle predefined/full split",
+    "splits": {
+      "train": {
+        "status": "missing",
+        "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/train/train.csv"
+      },
+      "val": {
+        "status": "missing",
+        "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/validation/validation.csv"
+      },
+      "test": {
+        "status": "missing",
+        "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/test/test.csv"
+      }
+    }
+  },
+  "full_verification": false,
+  "new_CICIoT_training_or_quality_results": false,
+  "remaining_blockers": [
+    "Matching raw archive/split CSVs were deleted and are not in GitHub.",
+    "Raw packet-to-CICIoT2023 feature parity and live capture remain unverified.",
+    "Repeated training checkpoints and later XSS intervention files were not committed."
+  ],
+  "interpretation": "Synthetic tests establish wiring only; published study scores remain historical bounded-sample evidence."
+}

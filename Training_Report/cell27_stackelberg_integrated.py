@@ -6,7 +6,8 @@ history_log, controller = train_ids(
     model, X_train_balanced, y_train_balanced_int, X_val, y_val,
     label_encoder.classes_.tolist(), epochs=10, batch_fraction=0.10,
     seed=42, output_dir=PROJECT_ROOT / "results/notebook",
-    controller_options={"scale_step": 0.15, "max_scale": 2.5})
+    controller_options={"scale_step": 0.15, "max_scale": 2.5,
+                        "available_defenses": ["NORMAL", "CLASS_REWEIGHTING"]})
 # Evaluate test once after validation-selected checkpoint restoration.
 y_true = y_test
 y_pred = predict_labels(model, X_test, class_labels)

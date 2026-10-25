@@ -1,0 +1,48 @@
+test_candidate_uses_signed_effects_and_ignores_audit (test_calibration.CalibrationTests.test_candidate_uses_signed_effects_and_ignores_audit) ... ok
+test_partition_is_disjoint_stratified_and_repeatable (test_calibration.CalibrationTests.test_partition_is_disjoint_stratified_and_repeatable) ... ok
+test_duplicate_csv_columns_rejected (test_deployment.DeploymentTests.test_duplicate_csv_columns_rejected) ... ok
+test_feature_order_imputation_and_missing_schema (test_deployment.DeploymentTests.test_feature_order_imputation_and_missing_schema) ... ok
+test_stream_benign_suppression_authenticated_delivery_and_ack (test_deployment.DeploymentTests.test_stream_benign_suppression_authenticated_delivery_and_ack) ... ok
+test_repacked_members_use_original_sampling_seed_names (test_recovery.CanonicalArchiveTests.test_repacked_members_use_original_sampling_seed_names) ... ok
+test_archive_includes_untracked_data_but_not_environment_or_keys (test_recovery.PackagingTests.test_archive_includes_untracked_data_but_not_environment_or_keys) ... ok
+test_matching_size_with_wrong_content_is_rejected (test_recovery.RecoveryTests.test_matching_size_with_wrong_content_is_rejected) ... ok
+test_restore_requires_every_hash_before_writing (test_recovery.RecoveryTests.test_restore_requires_every_hash_before_writing) ... ok
+test_synthetic_fixture_explicit_provenance_and_repeatability (test_recovery.RecoveryTests.test_synthetic_fixture_explicit_provenance_and_repeatability) ... ok
+test_concurrent_instances_share_durable_counters (test_security.SecurityTests.test_concurrent_instances_share_durable_counters) ... ok
+test_counter_exhaustion (test_security.SecurityTests.test_counter_exhaustion) ... ok
+test_handshake_channel_accessor_reuses_state (test_security.SecurityTests.test_handshake_channel_accessor_reuses_state) ... ok
+test_handshake_invalid_peer_signature (test_security.SecurityTests.test_handshake_invalid_peer_signature) ... ok
+test_handshake_replay (test_security.SecurityTests.test_handshake_replay) ... ok
+test_handshake_success_bidirectional (test_security.SecurityTests.test_handshake_success_bidirectional) ... ok
+test_invalid_counters_and_envelopes (test_security.SecurityTests.test_invalid_counters_and_envelopes) ... ok
+test_message_success_and_exact_replay (test_security.SecurityTests.test_message_success_and_exact_replay) ... ok
+test_mismatched_pinned_responder_key (test_security.SecurityTests.test_mismatched_pinned_responder_key) ... ok
+test_old_counter_different_authenticated_message (test_security.SecurityTests.test_old_counter_different_authenticated_message) ... ok
+test_persistence_and_nonce_uniqueness (test_security.SecurityTests.test_persistence_and_nonce_uniqueness) ... ok
+test_session_sender_isolation_and_aad (test_security.SecurityTests.test_session_sender_isolation_and_aad) ... ok
+test_socketpair_telemetry (test_security.SecurityTests.test_socketpair_telemetry) ... ok
+test_tampering_does_not_advance_state (test_security.SecurityTests.test_tampering_does_not_advance_state) ... ok
+test_wrong_identity_transcript_and_ephemeral (test_security.SecurityTests.test_wrong_identity_transcript_and_ephemeral) ... ok
+test_wrong_key (test_security.SecurityTests.test_wrong_key) ... ok
+test_34_outputs_with_nonzero_benign_id (test_training.TrainingTests.test_34_outputs_with_nonzero_benign_id) ... ok
+test_actual_predictions_drive_next_epoch_weights (test_training.TrainingTests.test_actual_predictions_drive_next_epoch_weights) ... Epoch 1: validation macro-F1=0.13333; defence=CLASS_REWEIGHTING
+Epoch 2: validation macro-F1=0.26667; defence=CLASS_REWEIGHTING
+ok
+test_baseline_budget_sampling_and_aggregation (test_training.TrainingTests.test_baseline_budget_sampling_and_aggregation) ... Epoch 1: validation macro-F1=1.00000; defence=baseline
+Epoch 2: validation macro-F1=1.00000; defence=baseline
+Epoch 1: validation macro-F1=1.00000; defence=NORMAL
+Epoch 2: validation macro-F1=1.00000; defence=NORMAL
+ok
+test_bounds_normalization_deterioration (test_training.TrainingTests.test_bounds_normalization_deterioration) ... ok
+test_game_evaluates_actions_and_consistent_matrices (test_training.TrainingTests.test_game_evaluates_actions_and_consistent_matrices) ... ok
+test_metrics_missing_predictions (test_training.TrainingTests.test_metrics_missing_predictions) ... ok
+test_missing_data_and_balancing (test_training.TrainingTests.test_missing_data_and_balancing) ... ok
+test_nonactuated_defence_and_input_validation (test_training.TrainingTests.test_nonactuated_defence_and_input_validation) ... ok
+test_replicator_symmetry_and_stability (test_training.TrainingTests.test_replicator_symmetry_and_stability) ... ok
+test_severity_not_counted_twice (test_training.TrainingTests.test_severity_not_counted_twice) ... ok
+test_train_only_preprocessing_preserves_splits (test_training.TrainingTests.test_train_only_preprocessing_preserves_splits) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.576s
+
+OK

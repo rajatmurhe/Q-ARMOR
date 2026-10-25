@@ -1,0 +1,5 @@
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+Epoch 1: validation macro-F1=0.16667; defence=CLASS_REWEIGHTING
+Epoch 2: validation macro-F1=0.17094; defence=CLASS_REWEIGHTING
+Epoch 3: validation macro-F1=0.29881; defence=CLASS_REWEIGHTING
+SYNTHETIC smoke passed; not CICIoT2023 evidence.

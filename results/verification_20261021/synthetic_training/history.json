@@ -1,0 +1,566 @@
+[
+  {
+    "epoch": 1,
+    "validation": {
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.16666666666666666,
+      "weighted_f1": 0.16666666666666666,
+      "macro_precision": 0.1111111111111111,
+      "macro_recall": 0.3333333333333333,
+      "false_alarm_rate": 0.0,
+      "per_class": {
+        "BenignTraffic": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 10
+        },
+        "A": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "B": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        }
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ]
+      ]
+    },
+    "decision": {
+      "recommended_defense": "CLASS_REWEIGHTING",
+      "anticipated_attack": "A",
+      "defender_utility": 0.4600000000000001,
+      "attacker_utility": 0.30000000000000004,
+      "class_weight_scale": 1.15,
+      "targeted_class": "A",
+      "current_class_weights": {
+        "0": 0.9523809523809523,
+        "1": 1.0952380952380951,
+        "2": 0.9523809523809523
+      },
+      "p_def": [
+        0.22008528661216975,
+        0.24071748654922154,
+        0.2706058534981933,
+        0.26859137334041544
+      ],
+      "p_att": [
+        0.5,
+        0.5
+      ],
+      "U_def": [
+        0.044999999999999984,
+        0.22499999999999992,
+        0.4600000000000001,
+        0.4449999999999999
+      ],
+      "U_att": [
+        0.4625000000000001,
+        0.4625000000000001
+      ],
+      "class_f1": {
+        "BenignTraffic": 0.5,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "game_f1": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "all_action_results": [
+        {
+          "defense_action": "NORMAL",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.9,
+          "defense_effectiveness": {
+            "A": 0.1,
+            "B": 0.1
+          },
+          "attacker_utilities": {
+            "A": 0.9,
+            "B": 0.9
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.09999999999999998,
+            "false_positive_cost": 0.05,
+            "latency_cost": 0.05,
+            "resource_cost": 0.05,
+            "utility": 0.044999999999999984
+          }
+        },
+        {
+          "defense_action": "STRICT_THRESHOLD",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.55,
+          "defense_effectiveness": {
+            "A": 0.45,
+            "B": 0.45
+          },
+          "attacker_utilities": {
+            "A": 0.55,
+            "B": 0.55
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.44999999999999996,
+            "false_positive_cost": 0.3,
+            "latency_cost": 0.1,
+            "resource_cost": 0.15,
+            "utility": 0.22499999999999992
+          }
+        },
+        {
+          "defense_action": "CLASS_REWEIGHTING",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.30000000000000004,
+          "defense_effectiveness": {
+            "A": 0.7,
+            "B": 0.7
+          },
+          "attacker_utilities": {
+            "A": 0.30000000000000004,
+            "B": 0.30000000000000004
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.7,
+            "false_positive_cost": 0.15,
+            "latency_cost": 0.25,
+            "resource_cost": 0.3,
+            "utility": 0.4600000000000001
+          }
+        },
+        {
+          "defense_action": "TARGETED_DEFENSE",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.10000000000000009,
+          "defense_effectiveness": {
+            "A": 0.8999999999999999,
+            "B": 0.8999999999999999
+          },
+          "attacker_utilities": {
+            "A": 0.10000000000000009,
+            "B": 0.10000000000000009
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.8999999999999999,
+            "false_positive_cost": 0.1,
+            "latency_cost": 0.35,
+            "resource_cost": 1.0,
+            "utility": 0.4449999999999999
+          }
+        }
+      ],
+      "applied_action": "CLASS_REWEIGHTING",
+      "deterioration": false,
+      "scale_change_reason": "increase_for_selected_weak_class"
+    },
+    "training_metrics": {
+      "loss": 1.8242307901382446
+    },
+    "training_weights": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0
+    },
+    "seconds": 9.293426917000033
+  },
+  {
+    "epoch": 2,
+    "validation": {
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.17094017094017092,
+      "weighted_f1": 0.17094017094017092,
+      "macro_precision": 0.1149425287356322,
+      "macro_recall": 0.3333333333333333,
+      "false_alarm_rate": 0.0,
+      "per_class": {
+        "BenignTraffic": {
+          "precision": 0.3448275862068966,
+          "recall": 1.0,
+          "f1": 0.5128205128205128,
+          "support": 10
+        },
+        "A": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "B": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        }
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          1
+        ],
+        [
+          10,
+          0,
+          0
+        ]
+      ]
+    },
+    "decision": {
+      "recommended_defense": "CLASS_REWEIGHTING",
+      "anticipated_attack": "A",
+      "defender_utility": 0.4600000000000001,
+      "attacker_utility": 0.30000000000000004,
+      "class_weight_scale": 1.2999999999999998,
+      "targeted_class": "A",
+      "current_class_weights": {
+        "0": 0.9090909090909092,
+        "1": 1.1818181818181819,
+        "2": 0.9090909090909092
+      },
+      "p_def": [
+        0.1925227524927794,
+        0.23020469450575162,
+        0.29078950741779086,
+        0.2864830455836781
+      ],
+      "p_att": [
+        0.5,
+        0.5
+      ],
+      "U_def": [
+        0.044999999999999984,
+        0.22499999999999992,
+        0.4600000000000001,
+        0.4449999999999999
+      ],
+      "U_att": [
+        0.4385122689365242,
+        0.4385122689365242
+      ],
+      "class_f1": {
+        "BenignTraffic": 0.5128205128205128,
+        "A": 0.0,
+        "B": 0.0
+      },
+      "game_f1": {
+        "A": 0.0,
+        "B": 0.0
+      },
+      "all_action_results": [
+        {
+          "defense_action": "NORMAL",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.9,
+          "defense_effectiveness": {
+            "A": 0.1,
+            "B": 0.1
+          },
+          "attacker_utilities": {
+            "A": 0.9,
+            "B": 0.9
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.09999999999999998,
+            "false_positive_cost": 0.05,
+            "latency_cost": 0.05,
+            "resource_cost": 0.05,
+            "utility": 0.044999999999999984
+          }
+        },
+        {
+          "defense_action": "STRICT_THRESHOLD",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.55,
+          "defense_effectiveness": {
+            "A": 0.45,
+            "B": 0.45
+          },
+          "attacker_utilities": {
+            "A": 0.55,
+            "B": 0.55
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.44999999999999996,
+            "false_positive_cost": 0.3,
+            "latency_cost": 0.1,
+            "resource_cost": 0.15,
+            "utility": 0.22499999999999992
+          }
+        },
+        {
+          "defense_action": "CLASS_REWEIGHTING",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.30000000000000004,
+          "defense_effectiveness": {
+            "A": 0.7,
+            "B": 0.7
+          },
+          "attacker_utilities": {
+            "A": 0.30000000000000004,
+            "B": 0.30000000000000004
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.7,
+            "false_positive_cost": 0.15,
+            "latency_cost": 0.25,
+            "resource_cost": 0.3,
+            "utility": 0.4600000000000001
+          }
+        },
+        {
+          "defense_action": "TARGETED_DEFENSE",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.10000000000000009,
+          "defense_effectiveness": {
+            "A": 0.8999999999999999,
+            "B": 0.8999999999999999
+          },
+          "attacker_utilities": {
+            "A": 0.10000000000000009,
+            "B": 0.10000000000000009
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.8999999999999999,
+            "false_positive_cost": 0.1,
+            "latency_cost": 0.35,
+            "resource_cost": 1.0,
+            "utility": 0.4449999999999999
+          }
+        }
+      ],
+      "applied_action": "CLASS_REWEIGHTING",
+      "deterioration": false,
+      "scale_change_reason": "increase_for_selected_weak_class"
+    },
+    "training_metrics": {
+      "loss": 1.6794157028198242
+    },
+    "training_weights": {
+      "0": 0.9523809523809523,
+      "1": 1.0952380952380951,
+      "2": 0.9523809523809523
+    },
+    "seconds": 0.2066391249973094
+  },
+  {
+    "epoch": 3,
+    "validation": {
+      "accuracy": 0.4,
+      "macro_f1": 0.298811544991511,
+      "weighted_f1": 0.298811544991511,
+      "macro_precision": 0.25396825396825395,
+      "macro_recall": 0.39999999999999997,
+      "false_alarm_rate": 0.09999999999999998,
+      "per_class": {
+        "BenignTraffic": {
+          "precision": 0.42857142857142855,
+          "recall": 0.9,
+          "f1": 0.5806451612903226,
+          "support": 10
+        },
+        "A": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "B": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3,
+          "f1": 0.3157894736842105,
+          "support": 10
+        }
+      },
+      "confusion_matrix": [
+        [
+          9,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          5
+        ],
+        [
+          7,
+          0,
+          3
+        ]
+      ]
+    },
+    "decision": {
+      "recommended_defense": "CLASS_REWEIGHTING",
+      "anticipated_attack": "B",
+      "defender_utility": 0.4467036011080333,
+      "attacker_utility": 0.31329639889196675,
+      "class_weight_scale": 1.1026315789473684,
+      "targeted_class": "B",
+      "current_class_weights": {
+        "0": 0.8816705336426915,
+        "1": 1.1461716937354989,
+        "2": 0.9721577726218098
+      },
+      "p_def": [
+        0.1777104118205663,
+        0.22347882888233142,
+        0.30591129301136194,
+        0.2928994662857403
+      ],
+      "p_att": [
+        0.5065855143316614,
+        0.4934144856683385
+      ],
+      "U_def": [
+        0.1871052631578947,
+        0.29023545706371184,
+        0.4533518005540167,
+        0.3959695290858725
+      ],
+      "U_att": [
+        0.41576821600536995,
+        0.36297545681503074
+      ],
+      "class_f1": {
+        "BenignTraffic": 0.5806451612903226,
+        "A": 0.0,
+        "B": 0.3157894736842105
+      },
+      "game_f1": {
+        "A": 0.0,
+        "B": 0.3157894736842105
+      },
+      "all_action_results": [
+        {
+          "defense_action": "NORMAL",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.9,
+          "defense_effectiveness": {
+            "A": 0.1,
+            "B": 0.1
+          },
+          "attacker_utilities": {
+            "A": 0.9,
+            "B": 0.6157894736842106
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.09999999999999998,
+            "false_positive_cost": 0.05,
+            "latency_cost": 0.05,
+            "resource_cost": 0.05,
+            "utility": 0.044999999999999984
+          }
+        },
+        {
+          "defense_action": "STRICT_THRESHOLD",
+          "attacker_best_response": "A",
+          "attacker_utility": 0.55,
+          "defense_effectiveness": {
+            "A": 0.45,
+            "B": 0.3868421052631579
+          },
+          "attacker_utilities": {
+            "A": 0.55,
+            "B": 0.4195290858725762
+          },
+          "defender_payoff": {
+            "attack": "A",
+            "security_benefit": 0.44999999999999996,
+            "false_positive_cost": 0.3,
+            "latency_cost": 0.1,
+            "resource_cost": 0.15,
+            "utility": 0.22499999999999992
+          }
+        },
+        {
+          "defense_action": "CLASS_REWEIGHTING",
+          "attacker_best_response": "B",
+          "attacker_utility": 0.31329639889196675,
+          "defense_effectiveness": {
+            "A": 0.7,
+            "B": 0.5421052631578948
+          },
+          "attacker_utilities": {
+            "A": 0.30000000000000004,
+            "B": 0.31329639889196675
+          },
+          "defender_payoff": {
+            "attack": "B",
+            "security_benefit": 0.6867036011080332,
+            "false_positive_cost": 0.15,
+            "latency_cost": 0.25,
+            "resource_cost": 0.3,
+            "utility": 0.4467036011080333
+          }
+        },
+        {
+          "defense_action": "TARGETED_DEFENSE",
+          "attacker_best_response": "B",
+          "attacker_utility": 0.19806094182825487,
+          "defense_effectiveness": {
+            "A": 0.8999999999999999,
+            "B": 0.7105263157894737
+          },
+          "attacker_utilities": {
+            "A": 0.10000000000000009,
+            "B": 0.19806094182825487
+          },
+          "defender_payoff": {
+            "attack": "B",
+            "security_benefit": 0.8019390581717452,
+            "false_positive_cost": 0.1,
+            "latency_cost": 0.35,
+            "resource_cost": 1.0,
+            "utility": 0.34693905817174514
+          }
+        }
+      ],
+      "applied_action": "CLASS_REWEIGHTING",
+      "deterioration": false,
+      "scale_change_reason": "increase_for_selected_weak_class"
+    },
+    "training_metrics": {
+      "loss": 1.6444627046585083
+    },
+    "training_weights": {
+      "0": 0.9090909090909092,
+      "1": 1.1818181818181819,
+      "2": 0.9090909090909092
+    },
+    "seconds": 0.3273117920034565
+  }
+]

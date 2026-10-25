@@ -48,3 +48,41 @@ The included deployment bundle can consume compatible feature CSV or JSONL recor
 `requirements-mac.txt` includes optional Mac notebook and dashboard dependencies. The recorded development environment is in `results/remaining_study_v2/pip_freeze.txt`.
 
 Some historical logs and manifests contain absolute paths from the development machine. Those paths record provenance; use the repository paths and local environment above when running a fresh checkout.
+
+## Recovery and fresh verification — 21 October 2026
+
+The active local working copy is `/Users/rajatmurhe/Projects/Q-ARMOR`, outside Desktop/iCloud eviction. On this Mac, `.venv` links to `/Users/rajatmurhe/.venvs/qarmor`; recipients should create their own environment. The earlier Desktop recovery remains historical.
+
+The deleted project was restored from GitHub commit `70f9176d6a24907899adcc52890c50d7c02f4ead`. The deployment checkpoint and preprocessing JSON match their original fingerprints. Saved research scores above are historical measurements, not new runs. The original raw archive and exact split CSVs were restored on 23 October and match all saved fingerprints. They are included in the delivery ZIP. Repeated training checkpoints and later XSS intervention outputs remain unavailable.
+
+The project supports a runnable checkpoint/secure-network demonstration. The explicit synthetic mode remains available for integration checks:
+
+```sh
+source .venv/bin/activate
+python -m tools.check_environment
+python -m tools.verify_project --output results/verification_new
+# Or only the real checkpoint and authenticated TCP integration:
+python -m tools.run_deployment_demo --synthetic --output results/demo_new
+```
+
+`--synthetic` is explicit. The generated schema inputs, delivered alerts and verification records are marked synthetic. They test actual checkpoint inference, signatures, encryption, replay state and receiver acknowledgement, not model accuracy, true attacks or packet-feature parity. No packet-capture privileges are needed. Supply `--features /path/to/features.csv` to demonstrate compatible real feature records instead. Without either input, a missing original validation CSV fails clearly.
+
+Recover the **same** sample when original files become available:
+
+```sh
+python -m tools.restore_data --archive /absolute/path/to/CSV.zip
+# Only for a Kaggle ZIP whose class-folder prefix is data/:
+python -m tools.restore_data --mirror-archive /path/to/kaggle-download.zip
+# Or restore previously saved exact split CSVs:
+python -m tools.restore_data --splits /absolute/path/to/CICIoT23_archive_sample_v1
+```
+
+The original-archive mode checks raw-archive and generated-split SHA-256 hashes against the frozen study manifest. Explicit mirror mode accepts a different ZIP container only after all three generated split files match their original fingerprints. Mismatched data is rejected; existing mismatched CSVs are never overwritten. It cannot reconstruct deleted training checkpoints or the original Kaggle predefined split. If downloading again, obtain the correct archive through the [official CICIoT2023 publisher](https://www.unb.ca/cic/datasets/iotdataset-2023.html), then verify it locally.
+
+Create a new delivery ZIP with all available source, untracked data/results, checkpoint and Git history:
+
+```sh
+python -m tools.package_project --output ../Q-ARMOR_Project_Delivery.zip
+```
+
+The packager reads the ZIP back and verifies every included file. It includes a SHA-256 manifest and produces an archive checksum. Machine-specific virtual environments, caches, private identities and counter databases are deliberately excluded; their paths are listed in the manifest. Setup instructions and recorded dependency versions replace the virtual environment for portability. See [DELIVERY_README.md](DELIVERY_README.md) and [current verification](results/verification_20261021/verification.json) for exact evidence and remaining blockers.

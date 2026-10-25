@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "dataset": "synthetic unit/smoke only",
+  "original_architecture": true,
+  "epochs": 3,
+  "reweight_fixture": true,
+  "applied_actions": [
+    "CLASS_REWEIGHTING",
+    "CLASS_REWEIGHTING",
+    "CLASS_REWEIGHTING"
+  ]
+}

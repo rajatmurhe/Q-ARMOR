@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "epochs": 3,
+  "batch_size": 16,
+  "batch_fraction": 1.0,
+  "adaptive": true,
+  "class_names": [
+    "BenignTraffic",
+    "A",
+    "B"
+  ],
+  "controller_options": {
+    "game_parameters": {
+      "resource_cost": {
+        "TARGETED_DEFENSE": 1.0
+      }
+    }
+  },
+  "base_weights": {
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0
+  },
+  "evidence_label": "SYNTHETIC smoke (not CICIoT2023)"
+}

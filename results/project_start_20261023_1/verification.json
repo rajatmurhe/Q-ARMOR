@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "evidence": "provided feature CSV; not a new training experiment",
+  "synthetic": false,
+  "records": 128,
+  "alerts_received": 121,
+  "authenticated_loopback_tcp": true,
+  "server_exit": 0,
+  "agent_exit": 0,
+  "features_sha256": "9f97a86a63944de8a9a11fa329165d683df08a7335e99c2038165c4aa3ab8886",
+  "private_keys_removed_on_exit": true
+}

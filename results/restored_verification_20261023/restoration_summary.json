@@ -1,0 +1,18 @@
+{
+  "status": "restoration_and_deployment_verified",
+  "archive_bytes": 1430268604,
+  "archive_sha256": "e211e878d2f39226ea3a854683f91ae6175b628807ee96eeecb7a04a36a28dbd",
+  "exact_split_hashes_verified": true,
+  "unit_tests": 38,
+  "real_validation_records": 128,
+  "predicted_alerts_delivered": 121,
+  "benign_predictions_suppressed": 7,
+  "independent_training_pickle_parity": "not_run_missing_reference",
+  "new_training_or_accuracy_experiment": false,
+  "raw_archive_in_delivery": "data/raw/CSV.zip",
+  "remaining_limitations": [
+    "Original predefined Kaggle split was not recovered; restored sample matches historical bounded-sample study.",
+    "Repeated training checkpoints, training preprocessing pickle, and later XSS outputs remain unavailable.",
+    "Raw-packet feature parity/live capture and optional PQC/alternate dataset extensions remain unverified or unimplemented."
+  ]
+}

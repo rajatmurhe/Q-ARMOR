@@ -1,0 +1,58 @@
+Reading Backdoor_Malware: 1 source CSV(s)
+Reading BenignTraffic: 4 source CSV(s)
+Reading BrowserHijacking: 1 source CSV(s)
+Reading CommandInjection: 1 source CSV(s)
+Reading DDoS-ACK_Fragmentation: 13 source CSV(s)
+Reading DDoS-HTTP_Flood: 1 source CSV(s)
+Reading DDoS-ICMP_Flood: 27 source CSV(s)
+Reading DDoS-ICMP_Fragmentation: 20 source CSV(s)
+Reading DDoS-PSHACK_FLOOD: 16 source CSV(s)
+Reading DDoS-RSTFINFLOOD: 16 source CSV(s)
+Reading DDoS-SYN_Flood: 16 source CSV(s)
+Reading DDoS-SlowLoris: 1 source CSV(s)
+Reading DDoS-SynonymousIP_Flood: 14 source CSV(s)
+Reading DDoS-TCP_Flood: 18 source CSV(s)
+Reading DDoS-UDP_Flood: 21 source CSV(s)
+Reading DDoS-UDP_Fragmentation: 13 source CSV(s)
+Reading DNS_Spoofing: 1 source CSV(s)
+Reading DictionaryBruteForce: 1 source CSV(s)
+Reading DoS-HTTP_Flood: 2 source CSV(s)
+Reading DoS-SYN_Flood: 8 source CSV(s)
+Reading DoS-TCP_Flood: 11 source CSV(s)
+Reading DoS-UDP_Flood: 17 source CSV(s)
+Reading MITM-ArpSpoofing: 2 source CSV(s)
+Reading Mirai-greeth_flood: 29 source CSV(s)
+Reading Mirai-greip_flood: 22 source CSV(s)
+Reading Mirai-udpplain: 25 source CSV(s)
+Reading Recon-HostDiscovery: 1 source CSV(s)
+Reading Recon-OSScan: 1 source CSV(s)
+Reading Recon-PingSweep: 1 source CSV(s)
+Reading Recon-PortScan: 1 source CSV(s)
+Reading SqlInjection: 1 source CSV(s)
+Reading Uploading_Attack: 1 source CSV(s)
+Reading VulnerabilityScan: 1 source CSV(s)
+Reading XSS: 1 source CSV(s)
+Created bounded development splits: /Users/rajatmurhe/Projects/Q-ARMOR/data/.qarmor-restore-8axf0wtt/sample
+Per-class maximum: {'train': 2000, 'validation': 500, 'test': 500}; actual rows: {'train': 66342, 'validation': 16586, 'test': 16586}; total: 99,514
+The source archive was read-only; this is not the original predefined split.
+{
+  "status": "verified",
+  "scope": "Frozen bounded archive sample; not the original Kaggle predefined/full split",
+  "splits": {
+    "train": {
+      "status": "verified",
+      "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/train/train.csv",
+      "sha256": "a8acb0fcc1a4a5a51739111d3fa4b486fd847cba8540a8e0bd608f852affb25c"
+    },
+    "val": {
+      "status": "verified",
+      "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/validation/validation.csv",
+      "sha256": "9f97a86a63944de8a9a11fa329165d683df08a7335e99c2038165c4aa3ab8886"
+    },
+    "test": {
+      "status": "verified",
+      "path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/test/test.csv",
+      "sha256": "43df38bb0720dac8075e44016d9093d9c05aa98b02b6986554cd9fe5fe52a329"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "validation_records": 128,
+  "schema_transform_bit_identical": null,
+  "reference_preprocessing_status": "not_run_no_reference_artifact",
+  "features_path": "/Users/rajatmurhe/Projects/Q-ARMOR/data/CICIoT23_archive_sample_v1/validation/validation.csv",
+  "features_sha256": "9f97a86a63944de8a9a11fa329165d683df08a7335e99c2038165c4aa3ab8886",
+  "dataset_identity": "provided feature CSV; compare hash to frozen data manifest before claiming study-split identity",
+  "model_load_seconds": 14.796529582999938,
+  "inference_batch_seconds": [
+    0.15254579199972795,
+    0.09799637499963865,
+    0.09685854199778987,
+    0.0950579589989502
+  ],
+  "steady_batch_median_seconds": 0.09685854199778987,
+  "encrypted_socketpair_end_to_end_seconds": 0.11861441699875286,
+  "expected_alerts": 121,
+  "benign_predictions_suppressed": 7,
+  "agent": {
+    "records_processed": 128,
+    "alerts_sent": 121,
+    "packets_sent": 121,
+    "encrypt_success": 121,
+    "encrypt_fail": 0,
+    "handshake_success": 1,
+    "inference_seconds": 0.09839174999797251,
+    "receiver_acknowledged": true
+  },
+  "server": {
+    "alerts_received": 121,
+    "telemetry_received": 1,
+    "handshake_success": 1
+  },
+  "bundle_manifest_sha256": "146901666359a66bd4dd0008419613f0899bfb922012d35ccb7a10304b71502c",
+  "scope": "Validation-feature replay through real model and authenticated socketpair; excludes packet extraction and network transit."
+}

@@ -5,7 +5,6 @@ import socket
 import threading
 import time
 from pathlib import Path
-import joblib
 import numpy as np
 import pandas as pd
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
@@ -15,20 +14,49 @@ from Server.server import handle_connection
 from crypto.authenticated_handshake import AuthenticatedHandshake
 
 
+def load_validation(path, records):
+    path = Path(path)
+    if records < 1:
+        raise ValueError('Record limit must be positive')
+    if not path.is_file():
+        raise FileNotFoundError(f'Validation CSV unavailable: {path}. Restore the frozen splits with python -m tools.restore_data --archive /path/to/CSV.zip')
+    frame = pd.read_csv(path, nrows=records)
+    if frame.empty:
+        raise ValueError('Validation CSV has no records')
+    if '_qarmor_source' in frame and frame['_qarmor_source'].eq('synthetic_smoke').any():
+        raise ValueError('Use tools.run_deployment_demo --synthetic for synthetic fixtures')
+    return frame
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--bundle',default='deployment/archive_sample_seed42')
     p.add_argument('--output',default='results/deployment_v1')
+    p.add_argument('--features',type=Path,default=Path('data/CICIoT23_archive_sample_v1/validation/validation.csv'))
+    p.add_argument('--records',type=int,default=128)
+    p.add_argument('--reference-preprocessing',type=Path,
+                   help='Optional trusted local training preprocessing.pkl for independent transform parity')
     a=p.parse_args();out=Path(a.output)
+    try:
+        frame=load_validation(a.features,a.records)
+    except (FileNotFoundError, ValueError) as exc:
+        p.error(str(exc))
+    if a.reference_preprocessing and not a.reference_preprocessing.is_file():
+        raise FileNotFoundError(a.reference_preprocessing)
     if out.exists():raise FileExistsError('Use a new result directory')
     out.mkdir(parents=True)
     start=time.perf_counter();engine=InferenceEngine(a.bundle);load_seconds=time.perf_counter()-start
-    frame=pd.read_csv('data/CICIoT23_archive_sample_v1/validation/validation.csv').iloc[:128]
     records=frame.to_dict('records')
-    prep=joblib.load('results/remaining_study_v2/ablation/42/preprocessing.pkl')
-    raw=frame[prep['features']].replace([np.inf,-np.inf],np.nan).fillna(engine.medians)
-    reference=prep['scaler'].transform(raw).astype(np.float32)
-    np.testing.assert_array_equal(engine.transform(records),reference)
+    parity=None
+    if a.reference_preprocessing:
+        import joblib
+        prep=joblib.load(a.reference_preprocessing)  # explicitly supplied trusted local artifact
+        if prep['features'] != engine.features:
+            raise ValueError('Reference preprocessing feature order differs from deployment bundle')
+        raw=frame[prep['features']].replace([np.inf,-np.inf],np.nan).fillna(engine.medians)
+        reference=prep['scaler'].transform(raw).astype(np.float32)
+        np.testing.assert_array_equal(engine.transform(records),reference)
+        parity=True
     timings=[]
     for _ in range(4):
         start=time.perf_counter();predictions=engine.predict(records);timings.append(time.perf_counter()-start)
@@ -54,7 +82,10 @@ def main():
         assert abs(delivered['confidence']-predicted['confidence']) < 1e-6
     benign=[i for i,x in enumerate(predictions) if not x['malicious']]
     assert not set(benign)&{x['record_index'] for x in alerts}
-    result=dict(status='passed',validation_records=len(records),schema_transform_bit_identical=True,
+    result=dict(status='passed',validation_records=len(records),schema_transform_bit_identical=parity,
+        reference_preprocessing_status='verified' if parity else 'not_run_no_reference_artifact',
+        features_path=str(a.features.resolve()),features_sha256=file_hash(a.features),
+        dataset_identity='provided feature CSV; compare hash to frozen data manifest before claiming study-split identity',
         model_load_seconds=load_seconds,inference_batch_seconds=timings,
         steady_batch_median_seconds=float(np.median(timings[1:])),
         encrypted_socketpair_end_to_end_seconds=end_to_end,expected_alerts=expected,

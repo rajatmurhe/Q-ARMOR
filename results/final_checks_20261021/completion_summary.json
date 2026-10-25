@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-21",
+  "working_copy": "/Users/rajatmurhe/Projects/Q-ARMOR",
+  "core_verification": "passed",
+  "unit_tests_passed": 37,
+  "original_architecture_smoke_epochs": 3,
+  "training_actuation_fixture": [
+    "CLASS_REWEIGHTING",
+    "CLASS_REWEIGHTING",
+    "CLASS_REWEIGHTING"
+  ],
+  "authenticated_tcp_demo": {
+    "status": "passed",
+    "evidence": "synthetic integration fixture; no dataset-quality evaluation",
+    "synthetic": true,
+    "records": 128,
+    "alerts_received": 128,
+    "authenticated_loopback_tcp": true,
+    "server_exit": 0,
+    "agent_exit": 0,
+    "features_sha256": "fe7e463335d692371bc628505f8bccb086f5951cb8d24499edf79e8fed1cacbd",
+    "private_keys_removed_on_exit": true
+  },
+  "saved_study_integrity": {
+    "status": "passed",
+    "completed_training_runs": 9,
+    "epochs_per_run": 10,
+    "calibration_pairs": 6,
+    "calibration_and_audit_disjoint": true,
+    "validation_rows_per_run": 8293,
+    "test_rows_per_run": 16586,
+    "all_first_epochs_match_per_seed": true,
+    "frozen_config_verified": true,
+    "next_epoch_weights_match_controller_decisions": true,
+    "saved_metrics_recomputed_from_confusion_matrices": true,
+    "reference_updates_followed_by_training": {
+      "42": 8,
+      "43": 8,
+      "44": 7
+    }
+  },
+  "full_dataset_rerun": "not_run; source archive download pending",
+  "data_recovery": "Original ZIP fingerprint required, or explicit mirror with exact regenerated split fingerprints.",
+  "remaining_external_work": [
+    "Restore matching real dataset; no substitution permitted.",
+    "Raw-PCAP feature parity/live capture require publisher extractor and fixture.",
+    "Deleted repeated checkpoints/XSS outputs cannot be restored from GitHub."
+  ],
+  "no_new_CICIoT_quality_claim": true,
+  "ci": "Workflow prepared locally; no GitHub CI execution claimed."
+}

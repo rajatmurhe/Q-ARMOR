@@ -1,0 +1,12 @@
+{
+  "p_def": {
+    "normalized": true,
+    "max_epoch_change": 0.02756253411939036,
+    "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+  },
+  "p_att": {
+    "normalized": true,
+    "max_epoch_change": 0.006585514331661491,
+    "unchanged_reason": "Equal expected utilities, symmetry, small utility gaps, or convergence can give fixed probabilities; inspect logged U vectors."
+  }
+}

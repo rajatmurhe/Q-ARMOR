@@ -1,4 +1,5 @@
 """Environment audit with bounded isolated imports and authenticated crypto smoke."""
+import argparse
 import importlib
 import json
 import os
@@ -8,14 +9,19 @@ import sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:sys.path.insert(0,str(ROOT))
-REQUIRED=['numpy','pandas','sklearn','imblearn','tensorflow','scapy','streamlit','cryptography','joblib','matplotlib','seaborn']
+CORE = ['numpy','pandas','sklearn','imblearn','tensorflow','cryptography','joblib','matplotlib','psutil']
+EXTRAS = {'core': [], 'notebook': ['seaborn'], 'legacy': ['seaborn','scapy','streamlit']}
 
 
 def main():
-    print('Q-ARMOR ENVIRONMENT CHECK',flush=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--profile', choices=['core','notebook','legacy'], default='core',
+                        help='Core requirements.txt is sufficient for training/inference/transport; legacy extras are optional')
+    args = parser.parse_args()
+    print('Q-ARMOR ENVIRONMENT CHECK:', args.profile, flush=True)
     print(sys.version,platform.platform(),platform.machine(),flush=True)
     failed=[]
-    for name in REQUIRED:
+    for name in CORE + EXTRAS[args.profile]:
         code=f'import {name} as m; print(getattr(m,"__version__","unknown"))'
         try:
             r=subprocess.run([sys.executable,'-c',code],capture_output=True,text=True,timeout=45)

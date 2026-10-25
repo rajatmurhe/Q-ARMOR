@@ -1,0 +1,4 @@
+usage: check_deployment.py [-h] [--bundle BUNDLE] [--output OUTPUT]
+                           [--features FEATURES] [--records RECORDS]
+                           [--reference-preprocessing REFERENCE_PREPROCESSING]
+check_deployment.py: error: Validation CSV unavailable: data/CICIoT23_archive_sample_v1/validation/validation.csv. Restore the frozen splits with python -m tools.restore_data --archive /path/to/CSV.zip

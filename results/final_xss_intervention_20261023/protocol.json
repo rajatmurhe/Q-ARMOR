@@ -1,0 +1,39 @@
+{
+  "target": "XSS",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "warmup_epochs": 5,
+  "continuation_epochs": 1,
+  "architecture": "unchanged original CNN/LSTM/attention; all 34 classes",
+  "data": "exact restored CICIoT2023 bounded archive sample",
+  "validation": "fixed audit half, stratified seed 2026; same rows before and after",
+  "target_basis": "Pre-established weak-class list and historical validation weakness; fixed before these runs.",
+  "threat_scope": "Focused XSS scenario: existing severity API sets XSS=1 and all other attacks=0. This prioritizes the chosen threat; it is not an unrestricted all-threat policy test.",
+  "game_parameters": "Existing original prototype defaults, not empirically calibrated coefficients; no cost/effectiveness tuning in this experiment.",
+  "defenses": [
+    "NORMAL",
+    "CLASS_REWEIGHTING"
+  ],
+  "scale_step": 0.15,
+  "max_scale": 2.5,
+  "training_rows_per_class": 1000,
+  "batch_size": 256,
+  "learning_rate": 0.0005,
+  "comparison": "Paired NORMAL and game-selected continuation; identical starting model/optimizer, training order, branch seed and epoch budget.",
+  "stopping": "Exactly three seeds, five warmup epochs and one continuation epoch per branch; no reruns or post-result tuning to obtain improvement.",
+  "interpretation": "Validation demonstration only. A before/after gain alone is not causal evidence; compare matched NORMAL. Test CSV never read. No artificial performance corruption or fabricated F1.",
+  "created_utc": "2026-10-23T17:17:01.879318+00:00",
+  "source_sha256": {
+    "train": "a8acb0fcc1a4a5a51739111d3fa4b486fd847cba8540a8e0bd608f852affb25c",
+    "validation": "9f97a86a63944de8a9a11fa329165d683df08a7335e99c2038165c4aa3ab8886"
+  },
+  "source_hashes": {
+    "tools/ids_model.py": "fc9fda7330285a1384a6164152bb022dcbd7e2508ca6c8bbfd29f0dc7eb825a0",
+    "tools/data_pipeline.py": "1accadfc643532b0381638755c4eb26b58e7bdff7131ca096d3724cc21b872b4",
+    "game_theory/training_bridge.py": "c6374343683df7732c773455d5ae383755f116189708ff29cc57c8b10a6e5629",
+    "game_theory/stackelberg.py": "04489d70aafe96aef869f1271d3958a2a9d4ea287590f8da4dcf37995b478a3d"
+  }
+}

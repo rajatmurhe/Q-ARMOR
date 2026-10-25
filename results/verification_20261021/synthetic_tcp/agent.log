@@ -1,0 +1,11 @@
+Building Enhanced_IoT_IDS_Model with input shape: (25,)
+{
+  "records_processed": 128,
+  "alerts_sent": 128,
+  "packets_sent": 128,
+  "encrypt_success": 128,
+  "encrypt_fail": 0,
+  "handshake_success": 1,
+  "inference_seconds": 0.24446758399426471,
+  "receiver_acknowledged": true
+}

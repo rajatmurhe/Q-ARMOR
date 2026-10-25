@@ -1,5 +1,6 @@
 # Local environments and caches
 .venv/
+.venv
 venv/
 __pycache__/
 *.py[cod]
@@ -29,3 +30,9 @@ results/live_receiver/
 .local-identities/
 results/deployment_demo_*/
 results/receiver_*/
+
+# Recovery-time bootstrap environment (not part of the deliverable)
+.venv-recovery-bootstrap/
+
+# Generated smoke-test inputs
+results/**/SYNTHETIC_features.csv

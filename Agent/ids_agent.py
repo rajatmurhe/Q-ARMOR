@@ -53,7 +53,8 @@ def run_stream(engine, records, sock, handshake, batch_size=128, confidence_thre
             if prediction['malicious'] and prediction['confidence'] >= confidence_threshold:
                 payload = dict(type='alert', timestamp=time.time(), label=prediction['label'],
                     confidence=prediction['confidence'], record_index=counts['records_processed'],
-                    source='ciciot2023_feature_record')
+                    source=('synthetic_smoke' if row.get('_qarmor_source') == 'synthetic_smoke'
+                            else 'provided_feature_record'))
                 for key in ['src_ip', 'dst_ip']:
                     if row.get(key):
                         payload[key] = str(row[key])

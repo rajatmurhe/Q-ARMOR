@@ -1,0 +1,6 @@
+{
+  "missing_input_rejected_before_model_and_output": true,
+  "unit_tests_passed": 38,
+  "real_data_replay": "blocked_missing_csv",
+  "independent_scaler_parity": "not_run_missing_original_preprocessing"
+}
